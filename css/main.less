@@ -1,0 +1,117 @@
+@import "normalize";
+
+#app {
+  .head {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+  } 
+}
+
+.sudoku-table {
+  border: 3px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16pt;
+
+  td {
+    border: 1px solid black;
+    width: 35px;
+    height: 35px;
+
+    & input {
+      &[disabled]{
+        background-color: gray;
+      }
+      &:focus{
+        background-color: #13e1c2;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    height: 35px;
+    border: 0px;
+    text-align: center;
+  }
+}
+
+.controls {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  * {
+    margin-left: 5px;
+  }
+
+  button {
+    display: inline-block;
+  }
+}
+
+.i2, .i5 {
+  border-bottom: 3px solid black !important;
+}
+
+.j2, .j5 {
+  border-right: 3px solid black !important;
+}
+
+.not-editable {
+  input {
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 600px) {
+  .sudoku-table {
+    margin-top: 20px;
+  }
+
+  .controls {
+    width: 400px;
+  }
+}
+
+#toast-container {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 250px;
+  height: 50px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  font-size: 12px;
+
+  .toast {
+    padding: 10px;
+    text-align: center;
+
+    .toast-message {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .toast-info,
+  .toast-success,
+  .toast-error {
+    border-radius: 10px;
+  }
+
+  .toast-info {
+    background-color: yellow;
+  }
+
+  .toast-success {
+    background-color: green;
+  }
+
+  .toast-error {
+    background-color: red;
+  }
+}
