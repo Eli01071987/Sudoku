@@ -8,4 +8,4 @@
 2) Выполнить npm run build;
 3) Выполнить npm run start;
 
-Запуститься Webpack Dev Server с проектом.
+Запустится Webpack Dev Server с проектом.
